@@ -1,10 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.less'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class AppComponent {
-  title = 'angular-education';
+  @HostBinding('class.app') public host: boolean = true;
+
 }

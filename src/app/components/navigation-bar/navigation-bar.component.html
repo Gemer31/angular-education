@@ -1,0 +1,35 @@
+<aside class="navigation-bar">
+  <img class="navigation-bar__logo" src="assets/icons/angular.svg">
+  <mat-tree
+    class="navigation-bar__tree"
+    [dataSource]="dataSource"
+    [treeControl]="treeControl"
+  >
+    <mat-tree-node
+      *matTreeNodeDef="let node"
+      matTreeNodePadding
+    >
+      <button mat-icon-button disabled></button>
+      <a class="asaaaaaaaaaa" [routerLink]="node.routerLink">{{node.name}}</a>
+    </mat-tree-node>
+
+    <mat-tree-node
+      *matTreeNodeDef="let node; when: hasChild"
+      matTreeNodePadding
+    >
+      <button
+        [routerLink]="node.routerLink"
+        mat-icon-button
+        matTreeNodeToggle
+        [attr.aria-label]="'Toggle ' + node.name"
+      >
+        <mat-icon class="mat-icon-rtl-mirror">
+          {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+        </mat-icon>
+      </button>
+      <a [routerLink]="node.routerLink">{{node.name}}</a>
+    </mat-tree-node>
+  </mat-tree>
+</aside>
+
+
