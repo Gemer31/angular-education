@@ -4,34 +4,25 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgModelComponent } from './components/ng-model/ng-model.component';
-import { HomeComponent } from './components/home/home.component';
+import { ViewFormsComponent } from './view-components/view-forms/view-forms.component';
+import { ViewHomeComponent } from './view-components/view-home/view-home.component';
 import { RouterModule, Routes } from '@angular/router';
-import { NotFoundComponent } from './components/not-found/not-found.component';
+import { NotFoundComponent } from './view-components/not-found/not-found.component';
 import { MatTreeModule } from '@angular/material/tree';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import { NavigationBarComponent } from './components/navigation-bar/navigation-bar.component';
-import { ReverseIfComponent } from './components/reverse-if/reverse-if.component';
-import { NoIfDirective } from './directives/no-if.directive';
+import { NavigationBarComponent } from './view-components/navigation-bar/navigation-bar.component';
+import { ViewDirectivesComponent } from './view-components/view-directives/view-directives.component';
 
 const appRoutes: Routes = [
-  { path: '', component: HomeComponent },
-  {
-    path: 'forms',
-    redirectTo: '/forms/ng-model',
-    pathMatch: 'full',
-    // children: [
-    //   { path: 'ng-model', component: NgModelComponent }
-    // ]
-  },
+  { path: '', component: ViewHomeComponent },
   {
     path: 'directives',
-    redirectTo: '/forms/ng-model',
-    pathMatch: 'full',
-    // children: [
-    //   { path: 'ng-model', component: NgModelComponent }
-    // ]
+    component: ViewDirectivesComponent,
+  },
+  {
+    path: 'forms',
+    component: ViewFormsComponent,
   },
   { path: '**', component: NotFoundComponent }
 ];
@@ -39,12 +30,10 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    NgModelComponent,
-    HomeComponent,
+    ViewFormsComponent,
+    ViewHomeComponent,
     NotFoundComponent,
     NavigationBarComponent,
-    ReverseIfComponent,
-    NoIfDirective,
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

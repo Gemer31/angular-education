@@ -1,0 +1,15 @@
+<aside class="navigation-bar">
+  <img class="navigation-bar__logo" src="assets/icons/angular.svg">
+  <div class="navigation-bar__tree">
+    <ng-container *ngFor="let node of NAVIGATION_NODES_DATA">
+      <div class="navigation-bar__tree-item">
+        <a
+          [routerLink]="node.routerLink"
+          routerLinkActive="navigation-bar__tree-item__active"
+        >{{node.name}}</a>
+      </div>
+    </ng-container>
+  </div>
+</aside>
+
+
