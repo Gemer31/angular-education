@@ -1,8 +1,21 @@
 <view-display-block
-  title="Bold directive"
+  title="Custom attribute directive"
   [images]="BOLD_DIRECTIVE_IMAGES"
 >
   <div #resultView>
-    <span><span bold>Bold</span> directive example</span>
+    >>
+    <span
+      customAttributeDirective
+      customBackgroundColor="red"
+      class="view-directives__example-bold"
+      >Hover cursor here and click</span>
+    <<
   </div>
+</view-display-block>
+
+<view-display-block
+  title="Multiply content structure directive"
+  [images]="BOLD_DIRECTIVE_IMAGES"
+>
+  <div *multiplyContent="4">Multiplyed elements</div>
 </view-display-block>

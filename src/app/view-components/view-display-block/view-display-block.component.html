@@ -5,8 +5,7 @@
   </mat-card-header>
   <mat-card-content class="view-display-block__windows">
     <mat-card class="view-display-block__windows__result">
-      <mat-card-content>
-        <ng-content></ng-content>
+      <mat-card-content *ngTemplateOutlet="resultView">
       </mat-card-content>
     </mat-card>
     <mat-card class="view-display-block__windows__code">

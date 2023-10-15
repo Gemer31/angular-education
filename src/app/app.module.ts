@@ -13,6 +13,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { NavigationBarComponent } from './view-components/navigation-bar/navigation-bar.component';
 import { ViewDirectivesComponent } from './view-components/view-directives/view-directives.component';
+import { ViewLifeCycleComponent } from "./view-components/view-life-cycle/view-life-cycle.component";
+import { ViewSignalsComponent } from "./view-components/view-signals/view-signals.component";
 
 const appRoutes: Routes = [
   { path: '', component: ViewHomeComponent },
@@ -24,7 +26,15 @@ const appRoutes: Routes = [
     path: 'forms',
     component: ViewFormsComponent,
   },
-  { path: '**', component: NotFoundComponent }
+  {
+    path: 'lifecycle',
+    component: ViewLifeCycleComponent,
+  },
+  {
+    path: 'signals',
+    component: ViewSignalsComponent,
+  },
+  { path: '**', component: NotFoundComponent },
 ];
 
 @NgModule({

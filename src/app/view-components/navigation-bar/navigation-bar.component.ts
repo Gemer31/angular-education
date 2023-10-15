@@ -39,5 +39,13 @@ export class NavigationBarComponent {
       name: 'Directives',
       routerLink: '/directives',
     },
+    {
+      name: 'Life cycle',
+      routerLink: '/lifecycle',
+    },
+    {
+      name: 'Signals',
+      routerLink: '/signals',
+    },
   ];
 }
