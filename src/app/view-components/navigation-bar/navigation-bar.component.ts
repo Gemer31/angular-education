@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {RouterModule, Routes} from "@angular/router";
+import { RouterLink, RouterLinkActive, RouterModule, Routes } from "@angular/router";
 import {ViewHomeComponent} from "../view-home/view-home.component";
 import {ViewDirectivesComponent} from "../view-directives/view-directives.component";
 import {ViewFormsComponent} from "../view-forms/view-forms.component";
@@ -27,7 +27,12 @@ const appRoutes: Routes = [
 @Component({
   selector: 'view-navigation-bar',
   templateUrl: './navigation-bar.component.html',
-  styleUrls: ['./navigation-bar.component.less']
+  styleUrls: ['./navigation-bar.component.less'],
+  standalone: true,
+  imports: [
+    RouterLink,
+    RouterLinkActive,
+  ],
 })
 export class NavigationBarComponent {
   public readonly NAVIGATION_NODES_DATA: NavigationNode[] = [
