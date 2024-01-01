@@ -1,14 +1,4 @@
-import {
-  AfterViewInit,
-  Component,
-  ContentChild,
-  ContentChildren,
-  ElementRef,
-  Input,
-  OnInit, Renderer2,
-  TemplateRef,
-  ViewChild
-} from '@angular/core';
+import { AfterViewInit, Component, ContentChild, Input, OnInit, Renderer2, TemplateRef } from '@angular/core';
 import { MatCardModule } from "@angular/material/card";
 import { MatDividerModule } from "@angular/material/divider";
 import { MatTabsModule } from "@angular/material/tabs";

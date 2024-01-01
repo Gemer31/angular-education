@@ -2,13 +2,15 @@
   title="Life cycle methods"
   [images]="BOLD_DIRECTIVE_IMAGES"
 >
-  <div #resultView>
-    <div>{{counter()}}</div>
-    <div>double: {{doubleCounter()}}</div>
-    <div class="view-signals__buttons">
-      <button (click)="changeCount('-')">-</button>
-      <button (click)="changeCount('+')">+</button>
+  <ng-template #resultView>
+    <div>
+      <div>{{counter()}}</div>
+      <div>double: {{doubleCounter()}}</div>
+      <div class="view-signals__buttons">
+        <button (click)="changeCount('-')">-</button>
+        <button (click)="changeCount('+')">+</button>
+      </div>
     </div>
-  </div>
+  </ng-template>
 </view-display-block>
 

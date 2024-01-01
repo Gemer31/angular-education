@@ -7,6 +7,7 @@ import { ViewFormsComponent } from "./app/view-components/view-forms/view-forms.
 import { ViewLifeCycleComponent } from "./app/view-components/view-life-cycle/view-life-cycle.component";
 import { ViewSignalsComponent } from "./app/view-components/view-signals/view-signals.component";
 import { NotFoundComponent } from "./app/view-components/not-found/not-found.component";
+import { provideAnimations } from "@angular/platform-browser/animations";
 
 const appRoutes: Routes = [
   {path: '', component: ViewHomeComponent},
@@ -32,5 +33,6 @@ const appRoutes: Routes = [
 bootstrapApplication(AppComponent, {
   providers: [
     provideRouter(appRoutes),
+    provideAnimations(),
   ]
 });

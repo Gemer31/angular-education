@@ -2,15 +2,15 @@
   title="Custom attribute directive"
   [images]="BOLD_DIRECTIVE_IMAGES"
 >
-  <div #resultView>
+  <ng-template #resultView>
     >>
     <span
       customAttributeDirective
       customBackgroundColor="red"
       class="view-directives__example-bold"
-      >Hover cursor here and click</span>
+    >Hover cursor here and click</span>
     <<
-  </div>
+  </ng-template>
 </view-display-block>
 
 <view-display-block
