@@ -10,11 +10,10 @@ export interface DisplayBlockImages {
 }
 
 @Component({
-  selector: 'view-display-block',
-  templateUrl: './view-display-block.component.html',
-  styleUrls: ['./view-display-block.component.less'],
-  standalone: true,
-  imports: [CommonModule, MatCardModule, MatDividerModule, MatTabsModule],
+    selector: 'view-display-block',
+    templateUrl: './view-display-block.component.html',
+    styleUrls: ['./view-display-block.component.less'],
+    imports: [CommonModule, MatCardModule, MatDividerModule, MatTabsModule]
 })
 export class ViewDisplayBlockComponent implements OnInit, AfterViewInit {
   @Input() public title: string = '';

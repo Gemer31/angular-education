@@ -8,16 +8,15 @@ import { RouterOutlet } from "@angular/router";
 
 // @ts-ignore
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.less'],
-  standalone: true,
-  encapsulation: ViewEncapsulation.None,
-  imports: [
-    ReactiveFormsModule,
-    FormsModule,
-    MatTreeModule, MatButtonModule, MatIconModule, NavigationBarComponent, RouterOutlet
-  ],
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.less'],
+    encapsulation: ViewEncapsulation.None,
+    imports: [
+        ReactiveFormsModule,
+        FormsModule,
+        MatTreeModule, MatButtonModule, MatIconModule, NavigationBarComponent, RouterOutlet
+    ]
 })
 export class AppComponent {
   @HostBinding('class.app') public host: boolean = true;

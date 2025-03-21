@@ -4,15 +4,14 @@ import { DisplayBlockImages, ViewDisplayBlockComponent } from "../view-display-b
 import { MultiplyContentStructureDirective } from "../../common/directives/multiply-content-structure.directive";
 
 @Component({
-  selector: 'view-directives',
-  templateUrl: './view-directives.component.html',
-  styleUrls: ['./view-directives.component.less'],
-  standalone: true,
-  imports: [
-    ViewDisplayBlockComponent,
-    AttributeDirective,
-    MultiplyContentStructureDirective,
-  ],
+    selector: 'view-directives',
+    templateUrl: './view-directives.component.html',
+    styleUrls: ['./view-directives.component.less'],
+    imports: [
+        ViewDisplayBlockComponent,
+        AttributeDirective,
+        MultiplyContentStructureDirective,
+    ]
 })
 export class ViewDirectivesComponent {
   @HostBinding('class.view-directives') private host = true;

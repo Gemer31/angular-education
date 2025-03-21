@@ -3,14 +3,13 @@ import { DisplayBlockImages, ViewDisplayBlockComponent } from "../view-display-b
 import { LifeCycleComponent } from "../../common/components/life-cycle/life-cycle.component";
 
 @Component({
-  selector: 'view-life-cycle',
-  templateUrl: './view-life-cycle.component.html',
-  styleUrls: ['./view-life-cycle.component.less'],
-  standalone: true,
-  imports: [
-    LifeCycleComponent,
-    ViewDisplayBlockComponent,
-  ],
+    selector: 'view-life-cycle',
+    templateUrl: './view-life-cycle.component.html',
+    styleUrls: ['./view-life-cycle.component.less'],
+    imports: [
+        LifeCycleComponent,
+        ViewDisplayBlockComponent,
+    ]
 })
 export class ViewLifeCycleComponent {
   @HostBinding('class.view-directives') private host = true;

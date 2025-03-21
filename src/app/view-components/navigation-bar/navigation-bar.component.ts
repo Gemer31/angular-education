@@ -25,14 +25,13 @@ const appRoutes: Routes = [
 ];
 
 @Component({
-  selector: 'view-navigation-bar',
-  templateUrl: './navigation-bar.component.html',
-  styleUrls: ['./navigation-bar.component.less'],
-  standalone: true,
-  imports: [
-    RouterLink,
-    RouterLinkActive,
-  ],
+    selector: 'view-navigation-bar',
+    templateUrl: './navigation-bar.component.html',
+    styleUrls: ['./navigation-bar.component.less'],
+    imports: [
+        RouterLink,
+        RouterLinkActive,
+    ]
 })
 export class NavigationBarComponent {
   public readonly NAVIGATION_NODES_DATA: NavigationNode[] = [

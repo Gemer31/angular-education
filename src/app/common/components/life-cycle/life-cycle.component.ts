@@ -14,14 +14,13 @@ import {
 import { LifeCycleChildComponent } from "../life-cycle-child/life-cycle-child.component";
 
 @Component({
-  selector: 'life-cycle',
-  templateUrl: './life-cycle.component.html',
-  styleUrls: ['./life-cycle.component.less'],
-  standalone: true,
-  imports: [
-    LifeCycleChildComponent,
-  ],
-  changeDetection: ChangeDetectionStrategy.OnPush
+    selector: 'life-cycle',
+    templateUrl: './life-cycle.component.html',
+    styleUrls: ['./life-cycle.component.less'],
+    imports: [
+        LifeCycleChildComponent,
+    ],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LifeCycleComponent implements OnChanges, OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
   public value: number = 0;
