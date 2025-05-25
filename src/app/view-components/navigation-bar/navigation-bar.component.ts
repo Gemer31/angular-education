@@ -51,5 +51,9 @@ export class NavigationBarComponent {
       name: 'Signals',
       routerLink: '/signals',
     },
+    {
+      name: 'Portals',
+      routerLink: '/portals',
+    },
   ];
 }

@@ -8,6 +8,7 @@ import { ViewLifeCycleComponent } from "./app/view-components/view-life-cycle/vi
 import { ViewSignalsComponent } from "./app/view-components/view-signals/view-signals.component";
 import { NotFoundComponent } from "./app/view-components/not-found/not-found.component";
 import { provideAnimations } from "@angular/platform-browser/animations";
+import { ViewPortalsComponent } from "./app/view-components/view-portals/view-portals.component";
 
 const appRoutes: Routes = [
   {path: '', component: ViewHomeComponent},
@@ -26,6 +27,10 @@ const appRoutes: Routes = [
   {
     path: 'signals',
     component: ViewSignalsComponent,
+  },
+  {
+    path: 'portals',
+    component: ViewPortalsComponent,
   },
   {path: '**', component: NotFoundComponent},
 ];
